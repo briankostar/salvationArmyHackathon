@@ -6,6 +6,7 @@ import Home from './components/routes/Home'
 import Navbar from './components/views/Navbar'
 import Profile from './components/routes/Profile'
 import Create from './components/routes/Create'
+import Donate from './components/routes/Donate'
 
 class App extends Component {
   render() {
@@ -13,14 +14,10 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navbar></Navbar>
-          <Route exact={true} path='/' render={(props) => <Home {...props} title={'Home'} />} />
+          <Route path='/' render={(props) => <Home {...props} title={'Home'} />} />
           <Route path='/profile/:id' render={(props) => <Profile {...props} title={'Profile'} />} />
           <Route path='/create' render={(props) => <Create {...props} title={'Create'} />} />
-
-          {/* <Route path="/login" render={() => <Login baseUrl={config.url} />} /> */}
-          {/* <Route path="/implicit/callback" component={ImplicitCallback} /> */}
-          {/* <Route path="/signup" component={SignupForm} /> */}
-          {/* <SecureRoute path="/profile" component={Profile} /> */}
+          <Route path='/donate' render={(props) => <Donate {...props} title={'Donate'} />} />
         </div>
       </BrowserRouter>
     );

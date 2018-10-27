@@ -5,10 +5,10 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar" role="navigation" aria-label="main navigation">
+            <nav className="navbar has-shadow" role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
-                    <Link to="/" className="navbar-item is-size-3" >
-                        Salvation Army
+                    <Link to="/"  >
+                        <img src="/imgs/logo.png" alt="Giving Hope Today" height="90" />
                     </Link>
 
                     <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -19,12 +19,14 @@ class Navbar extends Component {
                 </div>
 
                 <div id="navbarBasicExample" className="navbar-menu">
-
                     <div className="navbar-end">
                         <div className="navbar-item">
                             <div className="buttons">
-                                <Link to="/create" className="button is-primary navbar-item">
+                                <Link to="/create" className="button navbar-item salvation-red">
                                     <strong>Create Profile</strong>
+                                </Link>
+                                <Link to="/donate" className="button navbar-item salvation-red">
+                                    <strong>Donate</strong>
                                 </Link>
                             </div>
                         </div>

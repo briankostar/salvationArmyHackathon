@@ -1,8 +1,29 @@
 @import 'modules.scss';
 @import 'variables';
 
+.navbar.has-shadow {
+    box-shadow: 0 2px 0 0 #f5f5f5;
+
+    .navbar-brand{
+        img {
+            height: 90px;
+            margin: 10px 0 10px 30px;
+        }
+    }
+}
 
 .progress.is-smaller {
     height: 0.45rem;
     margin-bottom: 0.3rem;
+}
+
+.content {
+    .button {
+        margin-bottom: 0.3rem;
+    }
+}
+
+.button.salvation-red {
+    background: $salvation-red;
+    color: white;
 }
