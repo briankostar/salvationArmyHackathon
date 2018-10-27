@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+
+import Home from './components/routes/Home'
+import Navbar from './components/views/Navbar'
+import Profile from './components/routes/Profile'
+import Create from './components/routes/Create'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <div>
+          <Navbar></Navbar>
+          <Route exact={true} path='/' render={(props) => <Home {...props} title={'Home'} />} />
+          <Route path='/profile/:id' render={(props) => <Profile {...props} title={'Profile'} />} />
+          <Route path='/create' render={(props) => <Create {...props} title={'Create'} />} />
+
+          {/* <Route path="/login" render={() => <Login baseUrl={config.url} />} /> */}
+          {/* <Route path="/implicit/callback" component={ImplicitCallback} /> */}
+          {/* <Route path="/signup" component={SignupForm} /> */}
+          {/* <SecureRoute path="/profile" component={Profile} /> */}
+        </div>
+      </BrowserRouter>
     );
   }
 }
