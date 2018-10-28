@@ -21,15 +21,17 @@ export default class Donate extends React.Component {
                         <div className="box">
                             <div className="content">
                                 <p className="is-size-3">Donate with:</p>
-                                <a class="button is-link is-fullwidth">Paypal</a>
-                                <a class="button is-link is-fullwidth">Credit Card</a>
-                                <a class="button is-link is-fullwidth" onClick={this.open}>Cryptocurrency</a>
+                                <div class="buttons is-centered">
+                                    <a class="button is-link is-fullwidth">Paypal</a>
+                                    <a class="button is-link is-fullwidth">Credit Card</a>
+                                    <a class="button is-link is-fullwidth" onClick={this.open}>Cryptocurrency</a>
+                                </div>
                             </div>
                         </div>
 
                         <Modal show={this.state.show} onClose={this.close}>
                             <p class="image is-4by3">
-                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="" />
+                                <img src="/imgs/salvationQR2.png" alt="" />
                             </p>
                         </Modal>
                     </div>

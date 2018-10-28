@@ -14,7 +14,7 @@ class App extends Component {
       <BrowserRouter>
         <div>
           <Navbar></Navbar>
-          <Route path='/' render={(props) => <Home {...props} title={'Home'} />} />
+          <Route exact={true} path='/' render={(props) => <Home {...props} title={'Home'} />} />
           <Route path='/profile/:id' render={(props) => <Profile {...props} title={'Profile'} />} />
           <Route path='/create' render={(props) => <Create {...props} title={'Create'} />} />
           <Route path='/donate' render={(props) => <Donate {...props} title={'Donate'} />} />

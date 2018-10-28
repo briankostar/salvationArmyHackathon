@@ -10,20 +10,15 @@ class Navbar extends Component {
                     <Link to="/"  >
                         <img src="/imgs/logo.png" alt="Giving Hope Today" height="90" />
                     </Link>
-
-                    <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                        <span aria-hidden="true"></span>
-                    </a>
                 </div>
 
-                <div id="navbarBasicExample" className="navbar-menu">
+
+                <div id="navbarBasicExample" className="navbar-menu is-desktop">
                     <div className="navbar-end">
                         <div className="navbar-item">
                             <div className="buttons">
                                 <Link to="/create" className="button navbar-item salvation-red">
-                                    <strong>Create Profile</strong>
+                                    <strong>Create</strong>
                                 </Link>
                                 <Link to="/donate" className="button navbar-item salvation-red">
                                     <strong>Donate</strong>
@@ -34,6 +29,8 @@ class Navbar extends Component {
 
                 </div>
             </nav>
+
+
         )
     }
 };

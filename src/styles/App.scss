@@ -9,12 +9,21 @@
             height: 90px;
             margin: 10px 0 10px 30px;
         }
+
+        .buttons {
+            margin-left: auto;
+            margin-right: 15px;
+        }
     }
 }
 
 .progress.is-smaller {
     height: 0.45rem;
     margin-bottom: 0.3rem;
+}
+
+.progress.salvation-red {
+    background: $salvation-red;
 }
 
 .content {
@@ -26,4 +35,8 @@
 .button.salvation-red {
     background: $salvation-red;
     color: white;
+}
+
+.is-size-2.no-margin{
+    margin: 0
 }
